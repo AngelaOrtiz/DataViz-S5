@@ -22,9 +22,9 @@ st.write("# Visualizaciones Parte 2")
 st.write("## Ejemplo de Visualización en Mapa")
 
 # Obtener parte de la información
-geo_puntos_comuna = bip[ ["CODIGO","NOMBRE FANTASIA", "CERRO BLANCO 625", "MAIPU", "LATITUD", "LONGITUD"]].rename(columns={
+geo_puntos_comuna = bip[ ["CODIGO","NOMBRE FANTASIA", "DIRECCIÓN", "MAIPU", "LATITUD", "LONGITUD"]].rename(columns={
   "NOMBRE FANTASIA": "Negocio", 
-  "CERRO BLANCO 625": "Dirección", 
+  "DIRECCIÓN": "Dirección", 
   "MAIPU": "Comuna",
 })
 geo_puntos_comuna.dropna(subset=["Comuna"], inplace=True)
